@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color:hsl(235, 18%, 26%);
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    display: flex; /*alinear centrar*/
+    justify-content: center; /*alinear centrar*/
+    align-items: center;
+    height: 100vh; /*centrar contenido*/
+    margin: 0;
+}
+
+main{
+    /*border: 3px solid red;*/
+    width: 700px;
+    height: 500;
+    display: flex;
+    border-radius: 14px;
+    overflow:hidden;
+}
+
+.photo{
+    /*border: 3px solid rgb(0, 255, 98);*/
+    width: 350px;
+    background-image: url(newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.content{
+    /*border: 3px solid rgb(255, 187, 0);*/
+    background-color:#ffff;
+    width: 350px;
+    padding: 28px;/*añadir margen*/
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.content h1{
+    margin: 0;
+    font-family: "Roboto", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    color: hsl(160, 35%, 7%); 
+    font-weight: 700;  
+}
+
+.content p{
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.5;
+    color: hsl(228, 12%, 48%);
+    text-align: left;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los párrafos */
+}
+
+.list-items p {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    margin: 0;
+}
+
+.list-items img {
+    width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.content  button{
+    border:0;
+    color:#fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    background-color: hsl(235, 18%, 26%);
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 7px;
+}
+
+.content input{
+    border:1px solid #d6d2d2;
+    border-radius:7px;
+    border-color: #d6d2d2;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    padding: 14px;
+    display: flex;
+    gap: 7px;
+    border-radius: 7px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
