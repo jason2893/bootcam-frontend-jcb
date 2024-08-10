@@ -6,6 +6,10 @@ body{
     background-color: hsl((30, 38%, 92%));
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
+    display: flex; /*alinear centrar*/
+    justify-content: center; /*alinear centrar*/
+    align-items: center;
+    height: 100vh; /*centrar contenido*/
 }
 
 main{
