@@ -3,7 +3,23 @@
 /* font-family: "Fraunces", serif; */
 /* font-family: "Montserrat", sans-serif; */
 body{
-    background-color: bisque;
+    background-color: hsl((30, 38%, 92%));
     font-size: 14px;
-    font-family: "Fraunces", serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+main{
+    border: 3px solid red;
+    width: 650px;
+    height: 400px;
+}
+
+.photo{
+    border: 3px solid rgb(0, 255, 98);
+    width: 350px;
+}
+
+.content{
+    border: 3px solid rgb(255, 187, 0);
+    width: 300px;
 }
