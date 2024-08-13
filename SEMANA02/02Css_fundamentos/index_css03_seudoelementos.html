@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter{
+            font-size: 44px;
+        }
+        p::first-line{
+            background-color: aqua;
+        }
+
+        p::after{
+            content: "jason concepceion";
+        }
+
+        p::before{
+            content: "jason concepceion";
+        }
+
+        *::selection{
+            background: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas ab earum, adipisci est tempore,<br> 
+        nesciunt debitis saepe nobis veniam maxime sint sequi dolores ea nemo dolore qui aliquam alias architecto.
+    </p>
+</body>
+</html>

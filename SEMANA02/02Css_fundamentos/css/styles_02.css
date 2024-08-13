@@ -1,0 +1,51 @@
+[href]{
+    color: red;
+}
+
+[href="www.google.com"]{
+    color: rgb(0, 30, 255);
+}
+
+input[disabled]{
+    background-color: antiquewhite;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    background-color: bisque;
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+input:focus{
+    background-color: aquamarine;
+}
+
+/*ul li:nth-child(2){
+    color: red;
+}*/
+
+/*elementos pares*/
+/*ul li:nth-child(even){
+    color: red;
+}
+
+ul li:nth-child(odd){
+    color: rgb(0, 0, 255);
+}*/
+
+/*puedes jugar con los elementos 2n*/
+ul li:nth-child(2n + 1 ){
+    color: red;
+    background-color: antiquewhite;
+}
+
+
+/*
+ul li:first-child{
+    color: blue;
+}
+ul li:last-child{
+    color: chocolate;
+}*/
