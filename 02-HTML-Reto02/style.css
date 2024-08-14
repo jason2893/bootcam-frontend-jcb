@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color:hsl(47, 88%, 63%);
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    display: flex; /*alinear centrar*/
+    justify-content: center; /*alinear centrar*/
+    align-items: center;
+    height: 100vh; /*centrar contenido*/
+    margin: 0;
+}
+
+main {
+    background-color: #fff;
+    width: 310px;
+    height: 520px;
+    display: flex; /* Convertimos el main en un contenedor flex */
+    flex-direction: column; /* Alineamos los elementos en una columna */
+    align-items: center; /* Centramos horizontalmente */
+    justify-content: center; /* Centramos verticalmente */
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 8px 8px  rgba(0, 0, 0, 1);
+}
+
+.content{
+    /*border: 3px solid rgb(0, 255, 98);*/
+    width: 280px;
+    height: 270px;
+    display: flex; /* Hacemos de content un contenedor flex para su contenido interno */
+    flex-direction: column; /* Alineamos los elementos internos en una columna */
+    gap: 14px;
+    justify-content: center; /* Opcional: Si deseas centrar los elementos internos verticalmente */
+}
+
+.photo {
+    border-radius: 14px;
+    width: 290px;
+    height: 200px;
+    background-image: url(desing/images/illustration-article.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px auto; /* Margen superior de 5px y centrar horizontalmente */
+    display: block; /* Asegúrate de que la clase sea un bloque para que funcione el margin auto */
+}
+
+.content h1{
+    margin: 0;
+    color:black;
+    font-size: 25px;
+}
+
+.content p{
+    margin: 0;
+    color: rgb(26, 29, 28);
+    font-size: 12px;
+    color: #51517f;
+}
+
+
+
+.person-container {
+    display: flex; 
+    align-items: center; 
+}
+
+.person {
+    background-image: url(desing/images/image-avatar.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+
+
