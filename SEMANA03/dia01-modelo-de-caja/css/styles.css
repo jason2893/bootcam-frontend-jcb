@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+font-family: "Open Sans", sans-serif;
+font-family: "Raleway", system-ui;
+*/
+
+/* GENERAL */
+
+* { /* Selector Universal */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  background-color: hsl(217, 28%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  /* TODO: RWD para imágenes */
+  max-width: 100%;
+  height: auto;
+}
+
+/* UTILS */
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  /* width: 1000px; */
+  /* TODO: Adaptar el ancho de la ágina a dispositivos móviles */
+  width: min(100% - 3rem, 1440px);
+}
+
+/* HEADER SECTION */
+
+.header {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: 3rem;
+}
+
+/* HERO SECTION */
+
+.hero {
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 3rem;
+  padding-bottom: 12rem;
+
+  background-image: url(../images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+/*
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
+*/
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url(../images/bg-curvy-mobile.svg);
+  }
+}
+
+.hero__title {
+  /* border: 1px solid blue; */
+
+  /* width: 720px; */
+  width: min(100% - 3rem, 720px);
+
+  font-family: "Raleway", system-ui;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.hero__text {
+  /* border: 1px solid yellow; */
+
+  width: min(100% - 3rem, 720px);
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.hero__button {
+  font-family: "Raleway", system-ui;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  color: hsl(0, 0%, 100%);
+  background: 
+    linear-gradient(
+      90deg, 
+      hsl(176, 68%, 64%) 0%, 
+      hsl(198, 60%, 50%) 100%
+    );
+  transition: all 1s ease;
+}
+
+.hero__button:hover {
+  background: 
+    linear-gradient(
+      90deg, 
+      hsl(176, 68%, 64%) 35%, 
+      hsl(198, 60%, 50%) 100%
+    );
+  cursor: pointer;
+}
+
+/* FEATURES SECTION  */
+.features{
+ /*border: 1px solid red;*/
+ background-color: hsl(218, 28%, 13%);
+ display: grid;
+ grid-template-columns: 340px;/*crea columnas auto auto*/
+ justify-content: center;
+ gap: 5rem;
+}
+
+
+@media(min-width:992px){
+  .features{
+    grid-template-columns: 340px 340px;/*crea columnas auto auto*/
+  }
+}
+
+.feature{
+ /* border: 1px solid red;*/
+  display: flex;
+  flex-direction: column; /* se ponga en vertical*/
+  align-items: center;
+  gap:0.2rem;
+}
+
+
+.feature__title{
+  /*border: solid 1px yellow;*/
+  margin-top: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.feature__text{ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.feature__image{
+  width: 80px;
+  height: 75px;
+}
+
+/* TODO: COLLABORATION SECTION - Maquetar esta sección */
+
+
+.collaboration{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-top: 50px;
+  background-color: hsl(218, 28%, 13%);
+}
+
+@media(min-width:992px){
+  .collaboration{
+    flex-direction: row;
+  }
+}
+
+
+
+.how__works{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(100% -3rem, 480px);
+}
+
+.how__worsk_title{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700px;
+  font-size: 2.8rem;
+}
+
+.how__worsk_text{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.how__worsk_button{
+  color: paleturquoise;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  border-bottom: 1px solid red;
+  width: 160px;
+  padding-bottom: 0.5rem;
+}
+
+
+/* TESTIMONIALS SECTION  */
+
+
+.testimonials{
+  /*border: 1px solid red;*/
+
+  background-color: hsl(218, 28%, 13%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 992px) {
+  .testimonials {
+    flex-direction: row;
+  }
+}
+
+.testimonial{
+  width: 23rem; /* 23rem = 14px x 23 = 322px */
+  /* padding: TOP RIGHT BOTTOM LEFT; */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.5rem solid hsla(215, 52%, 9%, 0.3);
+  background-color: hsl(219, 30%, 18%);
+}
+
+.testimonial__text{
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+
+.testimonial__profile{
+  display: flex;
+  gap: .9rem;
+}
+
+.testimonial__profile img{
+  border-radius: 50%;
+  width: 40px;
+
+}
+
+.testimonial__profile h4{
+  font-weight: 700;
+}
+
+.testimonial__profile h5{
+  font-weight: 700;
+}
+
+/* EARLY-ACCESS SECTION  */
+
+/* FOOTER SECTION  */
+
+
