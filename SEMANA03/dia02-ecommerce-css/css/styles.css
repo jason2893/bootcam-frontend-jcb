@@ -1,0 +1,153 @@
+/* CUSTOM PROPERTIES <> Variables */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap';);
+
+:root{
+/*fonts*/
+--font-primary: "Kumbh Sans",sans-serif;
+--font-size: 16px;
+--font-weight-regular: 400;
+--font-weight-bold: 700;
+
+/*COLOR*/
+--primary-orange: hsl(26, 100%, 55%);
+--primary-pale-orange: hsl(25, 100%, 94%);
+
+--neutral-very-dark-blue: hsl(220, 13%, 13%);
+--neutral-dark-grayish-blue: hsl(219, 9%, 45%);
+--neutral-grayish-blue: hsl(220, 14%, 75%);
+--neutral-light-grayish-blue: hsl(223, 64%, 98%);
+
+--neutral-white: hsl(0, 0%, 100%);
+--neutral-black: hsl(0, 0%, 0%);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    /* border: 1px solid red; */
+  }
+  
+  html {
+    font-size: var(--font-size);
+  }
+  
+  body {
+    font-family: var(--font-primary);
+    /* color: var(--mi-color); */
+  }
+  
+  img {
+    /* RWD para imágenes*/
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* UTILS */
+  
+  .wrapper {
+    width: min(100% - 3rem, 1200px);
+  
+    margin: 0 auto;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  /* HEADER */
+  
+  .header {
+  
+    height: 4.5rem; /* 72 / 16px */
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 1.5rem;
+  }
+  
+  .header__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .header__links {
+    display: flex;
+    font-size: .8rem;
+    gap: 1rem;
+    color: var(--neutral-dark-grayish-blue);
+  }
+  
+  /* GALLERY */
+  
+  /* PRODUCT */
+  .header__logo img{
+    border: 1px solid red;
+    width: 80px;
+    gap: 1rem;
+  }
+
+  .header__icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+  }
+  
+  .header__icons img {
+    display: block;
+  }
+
+  hr {
+    width: 98%;
+    margin: 0 auto;
+    border: none; /* Opcional: si deseas quitar el borde por defecto */
+    border-top: 1px solid #ccc; /* Opcional: estilo del borde superior */
+  }
+
+  main {
+    margin-top: 150px; /* Ajusta este valor según sea necesario */
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio sobrante entre los elementos */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    gap: 20px; /* Espacio entre las secciones (opcional) */
+  }
+  
+  .gallery, .product {
+    flex: 1; /* Hace que ambos elementos ocupen un tamaño proporcional al espacio disponible */
+  }
+  
+  .gallery {
+    max-width: 50%; /* Limita el ancho máximo de la galería */
+    display: flex; /* Utiliza Flexbox para centrar el contenido */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente si el contenedor tiene altura */
+     border: 7px solid #000;
+  }
+  
+  .product {
+    max-width: 50%; 
+    border: 7px solid #000;
+}
+
+  .gallery img {
+    width: 650px; 
+    height: 520px; 
+    border-radius: 7px;
+    object-fit: cover; 
+  }
+
+
+
+  .product {
+    display: block;
+    
+  }

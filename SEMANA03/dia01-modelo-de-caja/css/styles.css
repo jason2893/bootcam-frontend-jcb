@@ -245,7 +245,6 @@ img {
   /*border: 1px solid red;*/
 
   background-color: hsl(218, 28%, 13%);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
