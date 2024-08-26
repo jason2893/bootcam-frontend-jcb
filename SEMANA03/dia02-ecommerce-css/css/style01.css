@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Oswald:wght@200..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between; 
+    background-color: hsl(53, 4%, 97%);
+    border: 0.5px solid hsl(53, 4%, 93%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+.header .header_logo_menu{  
+    /*border: 1px solid #000;*/
+    display: flex;
+    gap: 4rem;
+    margin: 1.5rem 1.5rem;
+}
+
+.header .header_logo{
+    /*border: 1px solid #000;*/
+    width: 250px; 
+}
+
+.header .header_links{
+   /*border: 1px solid #000;*/
+    width: 450px;
+    display: flex;
+}
+
+.header .header_links a{
+    /*border: 1px solid #000;*/
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    color: dimgrey;
+}
+
+.header .header_icons{
+   /*border: 1px solid #000;*/
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    text-align: right;
+    margin-right: 9.5rem;
+}
+
+main {
+    margin-top: 50px;
+    display: flex;
+    gap: 2px;
+  /*border: 1px solid #000;*/
+    width: 50%;
+    height: 650px;
+}
+
+.gallery{
+    /*border: 1px solid #000;*/
+    display: block;
+    width:50%;
+    text-align: center;
+}
+
+.product{
+     /*border: 1px solid #000;*/
+    width:50%;
+}
+
+.product .product__subtitle{
+    font-family: "New Amsterdam", sans-serif;
+    letter-spacing: 0.2rem; 
+    color: HSL(53, 32%, 33%);
+    font-size: 1.2rem;
+}
+
+.product .product__title{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.1rem; 
+    margin-top: 1.5rem;
+    color: HSL(176, 77%, 11%);
+    font-size: 3.5rem;
+    line-height: 0.9;
+}
+
+.product .product__description{
+    margin-top: 1.5rem;
+    font-family: "Urbanist", sans-serif;
+}
+
+.product .product__price{
+     /*border: 1px solid #000;*/
+    margin-top: 15px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+   
+}
+
+.product__price .product__wrapper{
+    font-size: 3.5rem;
+    font-family: "Urbanist", sans-serif;
+    display:inline-flex;
+    gap: 1.0rem;
+}
+
+.product__price .product__discount{
+    background-color:hsl(60, 87%, 51%);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.product__price .product__price-with-discount{
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
+    color: red;
+    margin-left: 8px;
+    font-size: 26px;
+    display: block;
+
+}
+
+.product__form {
+    margin-top: 15px;
+    display: flex;
+}
+
+.product__form .product__quantity{
+    background-color: hsl(154, 1%, 94%) ;
+   padding: 5px;
+   font-family: "Urbanist", sans-serif;
+}
+
+.product__form .product__quantity button{
+   background-color: transparent ;
+   padding: 15px 15px;
+   color: inherit; 
+   border: none;
+}
+
+.product__form .product__add-to-cart{
+    padding: 15px;
+    font-family: "Urbanist", sans-serif;
+    width: 72%;
+    background-color: hsl(35, 94%, 48%);
+    font-size: 25px;
+    border: none;
+
+}
+
+
+
+
+
+
+
+
