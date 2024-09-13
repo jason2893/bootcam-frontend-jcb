@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    /*border: 1px solid red;*/
+    padding: 15px;
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+}
+
+.main-resultado{
+    border-radius: 10px; /* Radio del borde redondeado (opcional) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    padding: 10px; /* Espaciado interno para no tocar el borde */
+    background-color: #fff; /* Color de fondo (opcional) */
+    padding: 35px;
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #3a1c71, #d76d77, #240b36);
+    color: aliceblue;
+    display: block;
+    font-family: "SUSE", sans-serif;
+    
+    box-shadow: 0 4px 8px rgba(0, 8, 2, 0.3); /* Sombra elegante */
+   
+}
+
+.titulo{
+    font-weight: bold;
+}
+
+.globo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    
+}
+
+.globo p{
+    padding: 40px;
+    border-radius: 50%;
+    font-size: 35px;
+    background: linear-gradient(45deg, #1a0551, #531253, #2c003e);
+}
+
+.globo small{
+    font-size: 15px;
+    display: block;
+}
+
+.mensaje{
+    display: block;
+}
+
+.mensaje h2{
+    display: block;
+    padding: 10px;
+}
+
+.mensaje span{
+    display: block;
+    padding: 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+
+
+.main-desglose{
+    padding: 20px;
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 15px;
+    font-family: "SUSE", sans-serif;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+
+    border-radius: 10px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    padding: 10px;
+    background-color: #fff; 
+}
+
+.main-desglose .desglose-titulo{
+    font-weight:bold;
+    padding: 20px;
+    font-size: 22px;
+    letter-spacing: -1px;
+    font-family: "SUSE", sans-serif;
+    margin-left: -170px;
+}
+
+
+.main-desglose .desglose-mensaje1{
+    display: flex;
+    background-color: hsl(2, 28%, 82%);
+    color: red;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    align-items: center; 
+}
+.main-desglose .desglose-mensaje1 > * {
+    margin: 0;
+}
+
+.main-desglose .desglose-mensaje1 p{
+    margin-left: auto; 
+    text-align: right; 
+    font-weight: bold;
+}
+
+
+.main-desglose .desglose-mensaje2{
+    display: flex;
+    background-color: hsl(179, 45%, 69%);
+    color: hsl(179, 89%, 22%);
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    align-items: center; 
+}
+.main-desglose .desglose-mensaje2 > * {
+    margin: 0;
+}
+
+.main-desglose .desglose-mensaje2 p{
+    margin-left: auto; 
+    text-align: right; 
+    font-weight: bold;
+}
+
+
+
+.main-desglose .desglose-mensaje3{
+    display: flex;
+    background-color: hsl(239, 37%, 80%);
+    color: hls(239, 81%, 29%);
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    align-items: center; 
+}
+.main-desglose .desglose-mensaje3 > * {
+    margin: 0;
+}
+
+.main-desglose .desglose-mensaje3 p{
+    margin-left: auto; 
+    text-align: right; 
+    font-weight: bold;
+}
+
+
+
+.main-desglose .desglose-mensaje4{
+    display: flex;
+    background-color: hsl(75, 41%, 79%);
+    color: hsl(75, 79%, 35%);
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    align-items: center; 
+}
+.main-desglose .desglose-mensaje4 > * {
+    margin: 0;
+}
+
+.main-desglose .desglose-mensaje4 p{
+    margin-left: auto; 
+    text-align: right; 
+    font-weight: bold;
+}
+
+.main-desglose button{
+    padding: 18px;
+    margin-top: 15px;
+    width: 50%;
+    font-family: "SUSE", sans-serif;
+    border: none;
+    border-radius: 20px;
+    background-color: hsl(206, 47%, 39%);
+    color: #fff;
+}
+
+
+
+@media (max-width: 850px) {
+    
+    main {
+        flex-direction: column; 
+        width: 100%; 
+        align-items: center; 
+        padding: 15px; 
+    }
+
+    .main-resultado,
+    .main-desglose {
+        width: 100%; 
+        max-width: 100%; 
+        box-sizing: border-box;
+    }
+
+    .main-desglose .desglose-titulo {
+        margin-left: 0;
+        text-align: center; 
+    }
+
+    .main-desglose .desglose-mensaje1,
+    .main-desglose .desglose-mensaje2,
+    .main-desglose .desglose-mensaje3,
+    .main-desglose .desglose-mensaje4 {
+        display: flex; /* Asegura que el contenedor use Flexbox */
+        flex-direction: row; /* Alinea los hijos en una fila */
+        align-items: center; /* Centra verticalmente los elementos hijos */
+        justify-content: space-between; /* Distribuye espacio entre los elementos hijos */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        padding: 10px; /* Añade algo de padding para mejor presentación */
+        border-radius: 10px; /* Redondea los bordes */
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    }
+
+    .main-desglose .desglose-mensaje1 > *,
+    .main-desglose .desglose-mensaje2 > *,
+    .main-desglose .desglose-mensaje3 > *,
+    .main-desglose .desglose-mensaje4 > * {
+        margin: 0; /* Elimina márgenes por defecto de los elementos hijos */
+    }
+
+    .main-desglose .desglose-mensaje1 p,
+    .main-desglose .desglose-mensaje2 p,
+    .main-desglose .desglose-mensaje3 p,
+    .main-desglose .desglose-mensaje4 p {
+        margin: 0; /* Elimina el margen por defecto */
+        text-align: right; /* Alinea el texto dentro del <p> a la derecha */
+        font-weight: bold; /* Aplica negrita al texto */
+    }
+
+    .main-desglose button {
+        width: 100%;
+        max-width: 300px; 
+    }
+}

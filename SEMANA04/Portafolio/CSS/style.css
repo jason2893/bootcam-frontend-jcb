@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nova+Flat&family=SUSE:wght@100..800&display=swap');
+
+
+:root{
+    --body-color: rgb(250, 250, 250);
+    --color-white: rgb(255, 255, 255);
+    --text-color-second: rgb(68, 68, 68);
+    --text-color-third: rgb(30, 159, 171);
+    --first-color: rgb(110, 87, 224);
+    --first-color-hover: rgb(40, 91, 212);
+    --second-color: rgb(0, 201, 255);
+    --third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    width: 100%;
+    height: 100px; /* Altura del header */
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra principal suave */
+                0 2px 4px rgba(0, 0, 0, 0.01);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff; /* Fondo opcional para el header */
+    z-index: 1000; /* Asegura que el header esté por encima del contenido */
+}
+
+header .header-logo{
+    width: 15%;
+    height: auto;
+    /*border: 1px solid red;*/
+    text-align: center;
+    text-align: center;
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;       /* Centra verticalmente */
+    flex-direction: column;  
+    display: flex;
+    color: hsl(194, 100%, 24%);
+}
+
+header .header-logo p{
+    font-size: 70px;
+    font-family: "Aldrich", sans-serif;
+    letter-spacing: -8px;
+
+
+}
+
+
+/*-----------------------------------*/
+
+header .header-menu{
+        padding:5px;
+        width: 70%;
+        height: auto;
+        display: flex;
+        align-items: center; /* Centrar contenido verticalmente */
+        justify-content: flex-start; /* Centrar contenido horizontalmente (opcional) */
+       /*border: 1px solid red;*/
+        
+}
+
+header .header-menu ul{
+    /*border: 1px solid red;*/
+    list-style: none;
+    display: flex;
+    margin: 0;
+    gap: 5rem;
+    margin-left: 40px;
+   
+}
+
+header .header-menu ul li{
+    /*border: 1px solid red;*/
+    font-family: "Aldrich", sans-serif;
+    
+}
+
+header .header-menu ul li a{
+    text-decoration: none;
+    color: HSL(200, 1%, 49%);
+    position: relative;
+    padding-bottom: 2px;
+}
+
+header .header-menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: HSL(200, 1%, 49%);
+    transition: width 0.3s ease;
+    background-color: HSL(203, 84%, 54%);
+}
+
+header .header-menu ul li a:hover::after {
+    width: 120%;
+}
+
+header .header-menu ul li a:hover {
+    width: 120%;
+    color: HSL(203, 84%, 54%);
+    font-weight: bold;
+}
+
+/*-----------------------------------*/
+
+header .header-cv{
+    width: 15%;
+    height: auto;
+    text-align: center;
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;       /* Centra verticalmente */
+    flex-direction: column;  
+    display: flex; 
+    /*border: 1px solid red;*/
+    
+}
+header .header-cv button{
+    padding: 15px;  /* Ajuste de padding */
+    height: auto;
+    text-align: center;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre imagen y texto */
+    background-color: #f0f0f0; /* Añadido para que el botón sea visible */
+    cursor: pointer;
+    font-family: "Aldrich", sans-serif;
+    /*border: 1px solid red;*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra suave */
+                0 2px 4px rgba(0, 0, 0, 0.06); /* Sombra secundaria más ligera */
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave para efectos de hover */
+}
+
+ header .header-cv button img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .header-cv button:hover {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.18), /* Sombra más profunda al hacer hover */
+                0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra secundaria */
+}
+
+/*-----------------------------------*/
+
+
+main {
+    border: 1px solid red;
+    padding: 20px; 
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    box-sizing: border-box; 
+    display: block;
+}
+
+.main-descripcion {
+    margin-top:150px;
+    display: flex;
+    border: 1px solid red;
+    gap: 0.5rem;
+    width: 100%;
+    height: 650px;
+
+}
+
+.descripcion-inicio{
+    border: 1px solid red;
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+
+}
+
+
+.descripcion-inicio span{
+     /* border: 1px solid red;*/
+    padding: 15px;
+    display: flex;
+    gap: 1rem;
+    font-family: "Nova Flat", system-ui;
+    letter-spacing: -5px;
+    font-size: 50px;
+}
+
+
+
+.descripcion-inicio span p{
+    font-size: 18px;
+    padding: 5px;
+    text-align: justify;
+    font-family: "SUSE", sans-serif;
+    letter-spacing: -0.5PX;
+}
+
+
+.descripcion-inicio span  .btn-contacto{
+    font-size: 15px;
+    padding: 25px;
+    font-family: "Aldrich", sans-serif;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    background-color: hsl(175, 13%, 86%);
+    border-radius: 15px;
+    transition: 0.5s;
+    background-color: HSL(185, 5%, 97%);
+}
+
+.descripcion-inicio span  .btn-contacto:hover{
+    background-color: HSL(203, 84%, 80%);
+}
+
+.descripcion-inicio span .icon_redes{
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center;    
+}
+
+
+/*-----------------------*/
+
+.main-imagen {
+    border: 1px solid red;
+    width: 50%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center;
+}
+
+
+.main-imagen img{
+    max-width: 70%;
+    max-height: 70%;
+    box-shadow: 0px 15px 6px rgba(0, 0, 0, 0.2); /* Sombra en la parte inferior */
+}
+    
+
+
+/*------------*/
+
+.descripcion-contacto {
+    border: 1px solid red;
+    margin-top: 50px;
+    display: block;
+    gap: 1rem;
+    width: 100%;
+    height: 650px;
+}
+
+.descripcion-contacto span {
+    display: flex;
+    /* border: 1px solid red;*/
+    width: 100%;
+    font-family: "Nova Flat", system-ui;
+    letter-spacing: -0px;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+}
+
+.descripcion-informacion{
+    margin-top: 30px;
+    display: flex;
+     /* border: 1px solid red;*/
+}
+
+.descripcion-informacion-sobremi{
+    width: 46%;
+    /* border: 1px solid red;*/
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.descripcion-informacion-sobremi p{
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra suave */
+    0 2px 4px rgba(0, 0, 0, 0.06);
+    font-family: "SUSE", sans-serif;
+    padding: 20px;
+ 
+}
+
+
+
+
+
+.descripcion-informacion-azure{
+    width: 18%;
+    /* border: 1px solid red;*/
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de los elementos a columnas */
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    text-align: center; /* Alinea el texto dentro de los elementos hijos */
+    align-items: center;
+
+}
+
+.descripcion-informacion-azure h3{
+   width: 100%;
+   font-family: "Nova Flat", system-ui;
+}
+
+.descripcion-informacion-azure p{
+ 
+    padding: 5px;
+    background-color: hsl(192, 89%, 40%);
+    margin:0.1rem;
+    border-radius: 8px;
+    font-family: "SUSE", sans-serif;
+    font-size: 15px;
+    color: #fff;
+ }
+ 
+
+
+
+
+.descripcion-informacion-aws{
+    width: 18%;
+   /* border: 1px solid red;*/
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de los elementos a columnas */
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    text-align: center; /* Alinea el texto dentro de los elementos hijos */
+    align-items: center;
+}
+
+
+.descripcion-informacion-aws h3{
+    width: 100%;
+    font-family: "Nova Flat", system-ui;
+    margin: 0; /* Elimina márgenes por defecto si es necesario */
+ }
+
+.descripcion-informacion-aws p{
+    padding: 5px;
+    background-color: hsl(29, 87%, 45%);
+    margin: 0.2rem; /* Ajusta el margen entre los elementos */
+    border-radius: 8px;
+    font-family: "SUSE", sans-serif;
+    font-size: 15px;
+    color: #fff;
+    height: 30px; /* Establece una altura fija para los párrafos */
+    display: flex; /* Asegura que el texto dentro de p esté alineado */
+    align-items: center; /* Centra verticalmente el texto dentro del párrafo */
+    justify-content: center; /* Centra horizontalmente el texto dentro del párrafo */
+
+ }
+
+
+ 
+
+
+
+
+
+
+.descripcion-informacion-gcp{
+    width: 18%;
+     /* border: 1px solid red;*/
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de los elementos a columnas */
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    text-align: center; /* Alinea el texto dentro de los elementos hijos */
+    align-items: center;
+}
+
+.descripcion-informacion-gcp h3{
+    width: 100%;
+    font-family: "Nova Flat", system-ui;
+ }
+
+.descripcion-informacion-gcp p{
+    padding: 5px;
+    background-color: hsl(236, 0%, 87%);
+    margin:0.2rem;
+    border-radius: 8px;
+    font-family: "SUSE", sans-serif;
+    font-size: 15px;
+    color: #000;
+    height: 30px;
+ }
+
+
+
+
+
