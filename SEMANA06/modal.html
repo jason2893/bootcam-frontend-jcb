@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Naughty Step</title>
+</head>
+<body>
+    <h1>Comparador de Secuencias</h1>
+    
+    <form id="naughtyForm">
+        <label for="original">Secuencia Original:</label>
+        <input type="text" id="original" name="original" required>
+        <br><br>
+        
+        <label for="modified">Secuencia Modificada:</label>
+        <input type="text" id="modified" name="modified" required>
+        <br><br>
+        
+        <button type="submit">CONSULTAR</button>
+    </form>
+    
+    <h2>Resultado:</h2>
+    <p id="result"></p>
+
+    <script>
+        function findNaughtyStep(original, modified) {
+            const lenOriginal = original.length;
+            const lenModified = modified.length;
+
+            for (let i = 0; i < Math.min(lenOriginal, lenModified); i++) {
+                if (original[i] !== modified[i]) {
+                    return lenOriginal > lenModified ? original[i] : modified[i];
+                }
+            }
+
+            if (lenOriginal > lenModified) {
+                return original[lenModified]; 
+            } else if (lenModified > lenOriginal) {
+                return modified[lenOriginal];
+            }
+
+            return '';
+        }
+
+        document.getElementById('naughtyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que el formulario se recargue
+            
+            const original = document.getElementById('original').value;
+            const modified = document.getElementById('modified').value;
+            
+            const result = findNaughtyStep(original, modified);
+            
+            document.getElementById('result').textContent = result ? `El paso travieso es: ${result}` : 'No hay diferencias.';
+        });
+    </script>
+</body>
+</html>

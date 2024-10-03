@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .grid{
+            display: grid;
+            grid-template:
+            "header header header header"
+            "aside aside aside aside"
+            "nav main main main"
+            "footer footer footer footer";
+            grid-template-rows: 100px 350px 350px 250px;
+            grid-template-columns: 20% 26.66% 26.66% 26.66%;
+            width: 100%;
+
+        }
+
+        header{
+            background-color: orange;
+            grid-area:header;
+            color: aliceblue;
+        }
+        aside{
+            background-color: black;
+            grid-area:aside;
+            color: aliceblue;
+        }
+        nav{
+            background-color: blue;
+            grid-area:nav;
+            color: aliceblue;
+        }
+        main{
+            background-color: aqua;
+            grid-area:main;
+            color: aliceblue;
+        }
+        footer{
+            background-color: green;
+            grid-area:footer;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="grid">
+
+        <header>Menu</header>
+
+        <aside>asider</aside>
+
+        <nav>nav</nav>
+
+        <main>main
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, in
+             dolor, fugit dolore odit asperiores non sapiente et numquam 
+            fugiat quasi eveniet eos repellat soluta! Quis a reiciendis esse hic.
+        </main>
+
+        <footer>footer</footer>
+
+
+    </div>
+
+</body>
+</html>

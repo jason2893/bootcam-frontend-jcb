@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word counter + javascript</title>
+    <style>
+        main{
+            margin: auto;
+            width: 40%;
+            padding: 10px;
+            text-align: center;
+            background-color: antiquewhite;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        textarea{
+            width: 556px;
+            height: 200px;
+        }
+        section{
+            display: flex;
+            width: 100%;
+            justify-items: center;
+            text-align: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        section div{
+            padding: 10%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Words Counter</h1>
+    
+        <section>
+            <div>
+                <span>Words: </span>
+                <span id="wordCount">0</span>
+            </div>
+            <div>
+                <span>Characters: </span>
+                <span id="charCount">0</span>
+            </div>
+            <div>
+                <span>Paragraphs: </span>
+                <span id="paragraphCount">0</span>
+            </div>
+        </section>
+    
+        <textarea id="textInput" placeholder="Start typing..." rows="10" cols="50"></textarea>
+    </main>
+    
+<SCRipt src="main.js"></SCRipt>
+</body>
+</html>

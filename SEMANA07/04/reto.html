@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+   
+</head>
+<body>
+    <div>
+        <h1>Calculadora de Peso</h1>
+        <div>
+            <div>
+                <form id="imcForm">
+                    <div >
+                        <label style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Altura (cm):</label>
+                       <br> <input style="padding: 5px;" type="number" id="altura" placeholder="ingresar alatura">
+                    </div>
+                    
+                    <div >
+                        <label style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Peso (kg):</label>
+                        <br> 
+                        <input  style="padding: 5px;" type="number" id="peso" placeholder="Ingresar peso">
+                    </div>
+                    <button type="submit" style="padding: 15px; margin-top: 5px;">Calcular IMC</button>
+                </form>
+
+                <div id="resultado" 
+                style="background-color: bisque; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 15px; " >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            document.getElementById('imcForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const alturaCm = parseFloat(document.getElementById('altura').value);
+            const pesoKg = parseFloat(document.getElementById('peso').value);
+
+
+
+            const alturaM = alturaCm / 100;
+            const imc = (pesoKg / (alturaM * alturaM)).toFixed(2);
+
+       
+            let resultadoText = `Tu IMC es: ${imc}. `;
+
+            if (imc < 18.5) {
+                resultadoText += "Categoría: Bajo peso.";
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                resultadoText += "Categoría: Normal.";
+            } else if (imc >= 25 && imc <= 29.9) {
+                resultadoText += "Categoría: Sobrepeso.";
+            } else if (imc >= 30) {
+                resultadoText += "Categoría: Obesidad.";
+            }
+
+   
+            document.getElementById('resultado').innerHTML = `
+                <div>
+                    ${resultadoText}
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

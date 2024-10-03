@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav with Slider</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            display: grid;
+            grid-template:
+            "header header header header"
+            "aside aside aside aside"
+            "nav main main main"
+            "footer footer footer footer";
+            grid-template-rows: 100px 350px auto 250px;
+            grid-template-columns: 20% 26.66% 26.66% 26.66%;
+            width: 100%;
+        }
+
+        header {
+            background-color: orange;
+            grid-area: header;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        aside {
+            background-color: black;
+            grid-area: aside;
+            color: aliceblue;
+        }
+
+        nav {
+            background-color: blue;
+            grid-area: nav;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        main {
+            background-color: aqua;
+            grid-area: main;
+            color: aliceblue;
+        }
+
+        footer {
+            background-color: green;
+            grid-area: footer;
+            color: aliceblue;
+        }
+        .menu-button {
+            display: none;
+        }
+        
+        @media (max-width: 900px) {
+            .grid {
+                grid-template:
+                "header header header header"
+                "aside aside aside aside"
+                "main main main main"
+                "footer footer footer footer";
+                grid-template-rows: 100px 350px auto 250px;
+      
+            }
+
+           
+            nav {
+            position: fixed;
+            top: 0;
+            left: -250px; 
+            background-color: aliceblue;
+            color: #333;
+            width: 250px;
+            height: 100%;
+            transition: transform 0.3s ease, visibility 0.3s ease; /* Transiciones */
+            visibility: hidden;
+        }
+
+        .show-nav {
+            transform: translateX(250px);
+            visibility: visible; 
+            opacity: 1;
+        }
+
+            .menu-button {
+                display: contents;
+                background-color: #333;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="grid">
+        <header>
+            <span>Menu</span>
+            <!-- Botón para desplegar el nav solo en pantallas pequeñas -->
+            <button class="menu-button" onclick="toggleNav()">☰ Filter</button>
+        </header>
+
+        <aside>asider</aside>
+
+        <nav id="nav_estyle">nav
+
+            filtro 1
+            filtro 2
+            filtro 3
+            filtro 2
+            filtro 3
+            filtro 2
+            filtro 3
+            filtro 2
+            filtro 3
+
+
+            filtro 2
+            filtro 3filtro 2
+            filtro 3
+        </nav>
+
+        <main>
+            main
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, in
+            dolor, fugit dolore odit asperiores non sapiente et numquam 
+            fugiat quasi eveniet eos repellat soluta! Quis a reiciendis esse hic.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, in
+            dolor, fugit dolore odit asperiores non sapiente et numquam 
+            fugiat quasi eveniet eos repellat soluta! Quis a reiciendis esse hic.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, in
+            dolor, fugit dolore odit asperiores non s
+        </main>
+
+        <footer>footer</footer>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('nav_estyle');
+            nav.classList.toggle('show-nav');
+        }
+    </script>
+
+</body>
+</html>
